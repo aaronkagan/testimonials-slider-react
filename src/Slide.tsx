@@ -143,6 +143,7 @@ const StyledMain = styled.main`
       background-color: #fff;
       padding: 1.4rem 1.7rem;
       transform: translate(0, -50%);
+      box-shadow: 0 10px 60px hsl(240, 11.475409836065579%, 80%);
     }
 
     .button {
