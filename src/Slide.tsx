@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 interface SlideType {
@@ -14,6 +15,28 @@ interface SlideProps {
 }
 
 const Slide: React.FC<SlideProps> = ({ slide, numSlides, onActiveSlide }) => {
+  function handleButtonPrev() {
+    onActiveSlide((prevVal: number) => (prevVal > 0 ? prevVal - 1 : prevVal));
+  }
+  function handleButtonNext() {
+    onActiveSlide((prevVal: number) =>
+      prevVal < numSlides - 1 ? prevVal + 1 : prevVal
+    );
+  }
+
+  function handleKeyPress(e: React.KeyboardEvent) {
+    if (e.key === 'ArrowLeft') handleButtonPrev();
+    if (e.key === 'ArrowRight') handleButtonNext();
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
+
   return (
     <StyledMain>
       <div className="col-left-wrapper">
@@ -39,22 +62,14 @@ const Slide: React.FC<SlideProps> = ({ slide, numSlides, onActiveSlide }) => {
               className="button"
               src="/assets/images/icon-prev.svg"
               alt="Previous"
-              onClick={() =>
-                onActiveSlide((prevVal: number) =>
-                  prevVal > 0 ? prevVal - 1 : prevVal
-                )
-              }
+              onClick={handleButtonPrev}
             />
 
             <img
               className="button"
               src="/assets/images/icon-next.svg"
               alt="Next"
-              onClick={() =>
-                onActiveSlide((prevVal: number) =>
-                  prevVal < numSlides - 1 ? prevVal + 1 : prevVal
-                )
-              }
+              onClick={handleButtonNext}
             />
           </div>
         </div>
