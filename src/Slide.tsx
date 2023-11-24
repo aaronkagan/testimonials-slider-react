@@ -152,35 +152,35 @@ const StyledMain = styled.main`
 
   @media all and (min-width: 768px) {
     flex-direction: row;
-  }
 
-  .col-left-wrapper {
-    .col-left {
-      text-align: start;
-      width: 100%;
-      max-width: 60%;
+    .col-left-wrapper {
+      .col-left {
+        text-align: start;
+        width: 100%;
+        max-width: 60%;
 
-      .text {
-        font-size: 3.2rem;
-        line-height: 4.4rem;
-        margin-bottom: 3.2rem;
-      }
-
-      .person {
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 0;
-        gap: 1rem;
-
-        .name {
-          margin-bottom: 0;
-          font-size: 2rem;
-          line-height: 3.8rem;
+        .text {
+          font-size: 3.2rem;
+          line-height: 4.4rem;
+          margin-bottom: 3.2rem;
         }
 
-        .title {
-          font-size: 2rem;
-          line-height: 3.8rem;
+        .person {
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 0;
+          gap: 1rem;
+
+          .name {
+            margin-bottom: 0;
+            font-size: 2rem;
+            line-height: 3.8rem;
+          }
+
+          .title {
+            font-size: 2rem;
+            line-height: 3.8rem;
+          }
         }
       }
     }
