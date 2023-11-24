@@ -37,7 +37,7 @@ const Slide: React.FC<SlideProps> = ({ slide, numSlides, onActiveSlide }) => {
           <div className="buttons">
             <img
               className="button"
-              src="src/assets/images/icon-prev.svg"
+              src="/src/assets/images/icon-prev.svg"
               alt="Previous"
               onClick={() =>
                 onActiveSlide((prevVal: number) =>
@@ -48,7 +48,7 @@ const Slide: React.FC<SlideProps> = ({ slide, numSlides, onActiveSlide }) => {
 
             <img
               className="button"
-              src="src/assets/images/icon-next.svg"
+              src="/src/assets/images/icon-next.svg"
               alt="Next"
               onClick={() =>
                 onActiveSlide((prevVal: number) =>
@@ -82,7 +82,7 @@ const StyledMain = styled.main`
       content: '';
       width: 100%;
       height: 100%;
-      background-image: url(src/assets/images/pattern-quotes.svg);
+      background-image: url(/src/assets/images/pattern-quotes.svg);
       background-repeat: no-repeat;
       background-size: 14%;
       left: 44%;
@@ -128,7 +128,7 @@ const StyledMain = styled.main`
   }
 
   .col-right-wrapper {
-    background-image: url('src/assets/images/pattern-bg.svg');
+    background-image: url('/src/assets/images/pattern-bg.svg');
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
