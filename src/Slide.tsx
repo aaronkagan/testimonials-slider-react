@@ -6,7 +6,7 @@ export default function Slide({ slide, numSlides, onActiveSlide }) {
     <StyledMain>
       <div className="col-left-wrapper">
         <div className="col-left">
-          <p className="text">&ldquo;{slide.text}&rdquo;</p>
+          <p className="text">&ldquo; {slide.text} &rdquo;</p>
           <p className="person">
             <span className="name">{slide.name}</span>{' '}
             <span className="title">{slide.title}</span>
@@ -142,7 +142,7 @@ const StyledMain = styled.main`
       justify-content: space-between;
       background-color: #fff;
       padding: 1.4rem 1.7rem;
-      transform: translateY(-50%);
+      transform: translate(0, -50%);
     }
 
     .button {
@@ -150,14 +150,16 @@ const StyledMain = styled.main`
     }
   }
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 1400px) {
     flex-direction: row;
+    gap: 0rem;
 
     .col-left-wrapper {
       .col-left {
         text-align: start;
         width: 100%;
-        max-width: 60%;
+        max-width: 90rem;
+        transform: translateX(20rem);
 
         .text {
           font-size: 3.2rem;
@@ -181,6 +183,19 @@ const StyledMain = styled.main`
             font-size: 2rem;
             line-height: 3.8rem;
           }
+        }
+      }
+    }
+
+    .col-right-wrapper {
+      .col-right {
+        .avatar {
+          width: 100%;
+          max-width: 56rem;
+        }
+
+        .buttons {
+          transform: translate(-200%, -50%);
         }
       }
     }
