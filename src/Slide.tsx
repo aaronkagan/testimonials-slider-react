@@ -24,7 +24,7 @@ const Slide: React.FC<SlideProps> = ({ slide, numSlides, onActiveSlide }) => {
     );
   }
 
-  function handleKeyPress(e: React.KeyboardEvent) {
+  function handleKeyPress(e: KeyboardEvent) {
     if (e.key === 'ArrowLeft') handleButtonPrev();
     if (e.key === 'ArrowRight') handleButtonNext();
   }
