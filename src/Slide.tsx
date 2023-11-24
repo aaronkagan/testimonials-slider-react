@@ -57,10 +57,6 @@ const StyledMain = styled.main`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  background-image: url(src/assets/images/pattern-curve.svg);
-  background-repeat: no-repeat;
-  background-position-x: 30%;
-  background-position-y: 120%;
   min-height: 100vh;
 
   .col-left-wrapper {

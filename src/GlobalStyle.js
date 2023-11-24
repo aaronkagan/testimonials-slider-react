@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    background-image: url(src/assets/images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 85vh;
   }
 `;
 
