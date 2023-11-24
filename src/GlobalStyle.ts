@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    overflow-x: hidden;
   }
 
   body {
@@ -27,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-y: 85vh;
+    overflow-x: hidden;
   }
 `;
 
