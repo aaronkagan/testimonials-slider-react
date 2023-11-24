@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from './GlobalStyle.ts';
 import Slide from './Slide';
 
 const slides = [
