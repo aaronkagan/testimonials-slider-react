@@ -1,7 +1,19 @@
 import styled from 'styled-components';
 
-export default function Slide({ slide, numSlides, onActiveSlide }) {
-  console.log(slide.avatar);
+interface SlideType {
+  text: string;
+  name: string;
+  title: string;
+  avatar: string;
+}
+
+interface SlideProps {
+  slide: SlideType;
+  numSlides: number;
+  onActiveSlide: (callback: (prevVal: number) => number) => void;
+}
+
+const Slide: React.FC<SlideProps> = ({ slide, numSlides, onActiveSlide }) => {
   return (
     <StyledMain>
       <div className="col-left-wrapper">
@@ -28,7 +40,7 @@ export default function Slide({ slide, numSlides, onActiveSlide }) {
               src="src/assets/images/icon-prev.svg"
               alt="Previous"
               onClick={() =>
-                onActiveSlide((prevVal) =>
+                onActiveSlide((prevVal: number) =>
                   prevVal > 0 ? prevVal - 1 : prevVal
                 )
               }
@@ -39,7 +51,7 @@ export default function Slide({ slide, numSlides, onActiveSlide }) {
               src="src/assets/images/icon-next.svg"
               alt="Next"
               onClick={() =>
-                onActiveSlide((prevVal) =>
+                onActiveSlide((prevVal: number) =>
                   prevVal < numSlides - 1 ? prevVal + 1 : prevVal
                 )
               }
@@ -49,7 +61,9 @@ export default function Slide({ slide, numSlides, onActiveSlide }) {
       </div>
     </StyledMain>
   );
-}
+};
+
+export default Slide;
 
 const StyledMain = styled.main`
   display: flex;
