@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     font-size: 3.2rem;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

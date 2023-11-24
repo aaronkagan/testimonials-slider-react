@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import GlobalStyle from './GlobalStyle';
+import Slide from './Slide';
 
 const slides = [
   {
@@ -28,42 +29,6 @@ function App() {
         onActiveSlide={setActiveSlide}
       />
     </>
-  );
-}
-
-function Slide({ slide, numSlides, onActiveSlide }) {
-  console.log(slide.avatar);
-  return (
-    <main>
-      <p>{slide.text}</p>
-      <p>
-        <span>{slide.name}</span> <span>{slide.title}</span>
-      </p>
-      <img
-        src={slide.avatar}
-        alt={slide.name}
-      />
-
-      <div className="buttons">
-        <button
-          onClick={() =>
-            onActiveSlide((prevVal) => (prevVal > 0 ? prevVal - 1 : prevVal))
-          }
-        >
-          {'<'}
-        </button>
-
-        <button
-          onClick={() =>
-            onActiveSlide((prevVal) =>
-              prevVal < numSlides - 1 ? prevVal + 1 : prevVal
-            )
-          }
-        >
-          {'>'}
-        </button>
-      </div>
-    </main>
   );
 }
 
